@@ -56,8 +56,16 @@
   <!-- Changes tab title depending on focus. Idea from @MinaMarkham. -->
   <!-- Implementation from https://stackoverflow.com/questions/21808160/ -->
   <script>
+    var onBlurTitles = [
+    "I love you 3000 😭",
+    "Pretty awesome tab",
+    "GOAT tab",
+    "Hey! Listen! 👾",
+    "Baby come back!"
+    ];
+
     window.onfocus = function() { document.title = 'Justin Shillingford';}
-    window.onblur = function() { document.title = 'I love you 3000 😭'}
+    window.onblur = function() { document.title = onBlurTitles[Math.floor(Math.random()*onBlurTitles.length)]}
   </script>
 
 
