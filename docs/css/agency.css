@@ -17,6 +17,15 @@ a {
   color: #fed136;
 }
 
+figcaption {
+  font-style: italic;
+  color: #b1b1b3;
+}
+
+figcaption a {
+  color: #deba37
+}
+
 a:hover {
   color: #fec503;
 }
@@ -724,4 +733,13 @@ ul.social-buttons li a {
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
+}
+
+.caption {
+  font-style: italic;
+  color: #b1b1b3;
+}
+
+.caption a{
+  color: #deba37
 }
