@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{% block title %}{{ post.title }} - Justin Shillingford's Blog{% endblock %}
+{% block content %}
+    <article>
+        <h1>{{ post.title }}</h1>
+        <div class="post-date">{{ post.date.strftime('%B %d, %Y') }}</div>
+        <div>{{ post.content|safe }}</div>
+    </article>
+    <p><a href="/blog/">← Back to Blog</a></p>
+{% endblock %}
