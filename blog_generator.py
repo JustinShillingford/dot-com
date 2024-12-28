@@ -128,7 +128,7 @@ class StaticBlogGenerator:
             fe.link(href=f'{self.site_url}{post["url"]}')
             fe.description(post['content'])
             time_zone = pytz.timezone('America/New_York')
-            fe.pubDate(post['date'].strftime("%a, %d %b %Y %H:%M:%S %z").astimezone(time_zone))
+            fe.pubDate(post['date'].astimezone(time_zone).strftime("%a, %d %b %Y %H:%M:%S %z"))
         
         os.makedirs(os.path.join(self.output_dir, 'blog'), exist_ok=True)
         fg.rss_file(os.path.join(self.output_dir, 'blog', 'feed.xml'))
