@@ -1,7 +1,7 @@
 import markdown
 from feedgen.feed import FeedGenerator
 from datetime import datetime
-from pytz import pytz
+import pytz
 import os
 import json
 from jinja2 import Environment, FileSystemLoader
