@@ -13,15 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Debug directory contents
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "\nDirectory contents:"
-          ls -la
-          echo "\nFull directory tree:"
-          tree
-
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
