@@ -104,7 +104,7 @@ class StaticBlogGenerator:
                 # Create post object
                 post = {
                     'title': front_matter.get('title', 'Untitled'),
-                    'date': datetime.strptime(front_matter.get('date', '2024-01-01'), '%Y-%m-%d'),
+                    'date': front_matter.get('date', '2025-01-01'),
                     'content': html_content,
                     'excerpt': ' '.join(content.split('\n\n')[0].split()[:50]) + '...',
                     'url': f'/blog/posts/{os.path.splitext(filename)[0]}.html'
@@ -126,7 +126,7 @@ class StaticBlogGenerator:
             fe.title(post['title'])
             fe.link(href=f'{self.site_url}{post["url"]}')
             fe.description(post['content'])
-            fe.pubDate(post['date'])
+            fe.pubDate(post['date'].strftime("%a, %d %b %Y %H:%M:%S %z"))
         
         os.makedirs(os.path.join(self.output_dir, 'blog'), exist_ok=True)
         fg.rss_file(os.path.join(self.output_dir, 'blog', 'feed.xml'))
