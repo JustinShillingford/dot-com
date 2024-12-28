@@ -104,7 +104,7 @@ class StaticBlogGenerator:
                 # Create post object
                 post = {
                     'title': front_matter.get('title', 'Untitled'),
-                    'date': front_matter.get('date', '2025-01-01'),
+                    'date': datetime.strptime(front_matter.get('date', '2025-01-01'), '%Y-%m-%d'),
                     'content': html_content,
                     'excerpt': ' '.join(content.split('\n\n')[0].split()[:50]) + '...',
                     'url': f'/blog/posts/{os.path.splitext(filename)[0]}.html'
