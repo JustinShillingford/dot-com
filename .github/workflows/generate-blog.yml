@@ -24,7 +24,7 @@ jobs:
           pip install markdown feedgen jinja2
 
       - name: Generate blog
-        run: python blog_generator.py
+        run: python ../../blog_generator.py
 
       - name: Deploy to docs folder
         run: |
