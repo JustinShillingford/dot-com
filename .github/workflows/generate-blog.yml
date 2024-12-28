@@ -2,45 +2,45 @@ name: Generate Blog
 on:
   push:
     branches:
-      - main
+      - master
     paths:
-      - '_posts/**'
-      - '_templates/**'
+      - "_posts/**"
+      - "_templates/**"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
-      
+          python-version: "3.x"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install markdown feedgen jinja2
-      
+
       - name: Generate blog
         run: python blog_generator.py
-      
+
       - name: Deploy to docs folder
         run: |
           # Create docs/blog directory if it doesn't exist
           mkdir -p docs/blog
-          
+
           # Remove old blog content
           rm -rf docs/blog/*
-          
+
           # Copy new content
           cp -r _site/* docs/
-          
+
           # Configure git
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          
+
           # Commit and push if there are changes
           git add docs
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate blog" && git push)
