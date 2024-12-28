@@ -1,6 +1,7 @@
 import markdown
 from feedgen.feed import FeedGenerator
 from datetime import datetime
+from pytz import pytz
 import os
 import json
 from jinja2 import Environment, FileSystemLoader
@@ -126,7 +127,8 @@ class StaticBlogGenerator:
             fe.title(post['title'])
             fe.link(href=f'{self.site_url}{post["url"]}')
             fe.description(post['content'])
-            fe.pubDate(post['date'].strftime("%a, %d %b %Y %H:%M:%S %z"))
+            time_zone = pytz.timezone('America/New_York')
+            fe.pubDate(post['date'].strftime("%a, %d %b %Y %H:%M:%S %z").astimezone(time_zone))
         
         os.makedirs(os.path.join(self.output_dir, 'blog'), exist_ok=True)
         fg.rss_file(os.path.join(self.output_dir, 'blog', 'feed.xml'))
