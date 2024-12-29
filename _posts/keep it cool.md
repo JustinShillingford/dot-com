@@ -3,6 +3,9 @@ title: keep it cool
 date: 2024-12-29
 ---
 
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3QuEpyj4kTRWiWuckd1hcK?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe src="https://embed.tidal.com/tracks/124206524" width="500" height="120" allow="encrypted-media" sandbox="allow-same-origin allow-scripts allow-forms allow-popups" title="TIDAL Embed Player" />
+
 yeah so i'm blogging now. i wanted to start using my website for more than i currently use it for (an out of date platform to promote myself as a student fresh out of grad school).
 
 i've been having fun writing in small bursts again via microblogging on bluesky (feel free to drop me a follow [@justinshillingford.com](https://bsky.app/profile/justinshillingford.com)). i'm feeling the creative itch again and wanted to express it via webdev. and a blog "platform" that i "control" felt like a good start. i think the next step (besides making this blog prettier) is getting it to support bluesky replies as comments.
@@ -32,6 +35,3 @@ i'm a big fan of time blocking. it helps me keep up with my routines and i love 
 if any of these change or if anything interesting happens with them i'll write about it here.
 
 but yeah i'll probably just use this space as a place to longform yap when i'm not in the mood for writing a bluesky thread.
-
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3QuEpyj4kTRWiWuckd1hcK?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<iframe src="https://embed.tidal.com/tracks/124206524" width="500" height="120" allow="encrypted-media" sandbox="allow-same-origin allow-scripts allow-forms allow-popups" title="TIDAL Embed Player" />
