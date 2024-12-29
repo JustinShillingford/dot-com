@@ -45,7 +45,7 @@ class StaticBlogGenerator:
     <style>
         /* Light mode styles */
         :root {
-            --bg-color: #ffffff;
+            --bg-color: #a47764;
             --text-color: #333333;
             --link-color: #0066cc;
             --border-color: #dddddd;
