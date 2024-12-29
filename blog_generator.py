@@ -105,19 +105,6 @@ class StaticBlogGenerator:
             font-size: 0.8rem;
         }
         
-        .toc {
-            background: var(--code-bg);
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 4px;
-        }
-        
-        .toc a {
-            display: block;
-            padding: 0.2rem 0;
-            text-decoration: none;
-        }
-        
         .search-container {
             margin: 1rem 0;
         }
@@ -269,13 +256,6 @@ class StaticBlogGenerator:
         </div>
         {% endif %}
         
-        {% if post.toc %}
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            {{ post.toc|safe }}
-        </div>
-        {% endif %}
-        
         <div>{{ post.content|safe }}</div>
         
         <div class="share-buttons">
@@ -310,20 +290,6 @@ class StaticBlogGenerator:
         words = len(content.split())
         return max(1, math.ceil(words / 200))
 
-    def generate_toc(self, content):
-        """Generate table of contents from HTML content"""
-        headings = re.findall(r'<h[2-3].*?>(.*?)</h[2-3]>', content)
-        if not headings:
-            return None
-            
-        toc = ['<div class="toc-content">']
-        for heading in headings:
-            slug = re.sub(r'[^\w\s-]', '', heading.lower())
-            slug = re.sub(r'[-\s]+', '-', slug).strip('-')
-            toc.append(f'<a href="#{slug}">{heading}</a>')
-        toc.append('</div>')
-        return '\n'.join(toc)
-
     def load_posts(self):
         """Load all markdown posts from _posts directory"""
         self.posts = []
@@ -351,9 +317,6 @@ class StaticBlogGenerator:
 
                 # Convert content to HTML
                 html_content = markdown.markdown(content)
-
-                # Generate table of contents
-                toc = self.generate_toc(html_content)
                 
                 # Create post object
                 post = {
@@ -364,7 +327,6 @@ class StaticBlogGenerator:
                     'url': f'/blog/posts/{os.path.splitext(filename)[0].replace(" ", "_")}.html',
                     'categories': categories,
                     'tags': tags,
-                    'toc': toc,
                     'reading_time': self.estimate_reading_time(content)
                 }
                 self.posts.append(post)
