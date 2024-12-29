@@ -259,7 +259,7 @@ class StaticBlogGenerator:
         <div>{{ post.content|safe }}</div>
         
         <div class="share-buttons">
-            <a href="https://bsky.app/intent/compose?text={{ post.title}} - {{ site_url }}{{ post.url }}" target="_blank" rel="noopener">share on bluesky</a>
+            <a href="https://bsky.app/intent/compose?text={{ post.title}} - {{ self.site_url }}{{ post.url }}" target="_blank" rel="noopener">share on bluesky</a>
         </div>
         
         <div class="post-navigation">
