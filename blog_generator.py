@@ -33,12 +33,6 @@ class StaticBlogGenerator:
     <meta charset="utf-8">
     <title>{% block title %}Justin Shillingford's Blog{% endblock %}</title>
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feed.xml">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png?v=zX7y2Nojd3">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png?v=zX7y2Nojd3">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png?v=zX7y2Nojd3">
-    <link rel="manifest" href="img/favicon/site.webmanifest?v=zX7y2Nojd3">
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg?v=zX7y2Nojd3" color="#58c6ee">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico?v=zX7y2Nojd3">
     <style>
         body { max-width: 800px; margin: 0 auto; padding: 1rem; font-family: system-ui; }
         article { margin-bottom: 2rem; }
@@ -127,6 +121,7 @@ class StaticBlogGenerator:
         fg.title('Justin Shillingford\'s Blog')
         fg.link(href=f'{self.site_url}/blog')
         fg.description('Latest posts from Justin Shillingford\'s Blog')
+        fg.logo(f'{self.site_url}/img/favicon/favicon-32x32.png')
         
         for post in self.posts:
             fe = fg.add_entry()
