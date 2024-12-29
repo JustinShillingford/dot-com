@@ -259,8 +259,7 @@ class StaticBlogGenerator:
         <div>{{ post.content|safe }}</div>
         
         <div class="share-buttons">
-            <a href="https://twitter.com/intent/tweet?url={{ site_url }}{{ post.url }}&text={{ post.title }}" target="_blank" rel="noopener">Share on Twitter</a>
-            <a href="https://www.linkedin.com/shareArticle?url={{ site_url }}{{ post.url }}&title={{ post.title }}" target="_blank" rel="noopener">Share on LinkedIn</a>
+            <a href="https://bsky.app/intent/compose?text={{ post.title}} - {{ site_url }}{{ post.url }}" target="_blank" rel="noopener">share on bluesky</a>
         </div>
         
         <div class="post-navigation">
