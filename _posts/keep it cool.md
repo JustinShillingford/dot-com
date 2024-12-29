@@ -1,6 +1,8 @@
 ---
 title: keep it cool
 date: 2024-12-29
+categories: main
+tags: tools, meta, lady_gaga
 ---
 yeah so i'm blogging now. i wanted to start using my website for more than i currently use it for (an out of date platform to promote myself as a student fresh out of grad school).
 
