@@ -32,5 +32,7 @@ if any of these change or if anything interesting happens with them i'll write a
 
 but yeah i'll probably just use this space as a place to longform yap when i'm not in the mood for writing a bluesky thread.
 
-https://open.spotify.com/track/3QuEpyj4kTRWiWuckd1hcK?si=abf9865958eb4195
-https://tidal.com/browse/track/124206524?u
+---
+featured track
+- [spotify](https://open.spotify.com/track/3QuEpyj4kTRWiWuckd1hcK?si=abf9865958eb4195)
+- [tidal](https://tidal.com/browse/track/124206524?u)
