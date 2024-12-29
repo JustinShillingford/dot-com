@@ -46,10 +46,10 @@ class StaticBlogGenerator:
         /* Light mode styles */
         :root {
             --bg-color: #a47764;
-            --text-color: #333333;
-            --link-color: #0066cc;
-            --border-color: #dddddd;
-            --code-bg: #f5f5f5;
+            --text-color: #f2ecea;
+            --link-color: #6491a4;
+            --border-color: #f9f6f4;
+            --code-bg: #e0d0c9;
         }
         
         /* Dark mode styles */
