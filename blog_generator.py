@@ -108,7 +108,7 @@ class StaticBlogGenerator:
                     'date': datetime.strptime(front_matter.get('date', '2025-01-01'), '%Y-%m-%d'),
                     'content': html_content,
                     'excerpt': ' '.join(content.split('\n\n')[0].split()[:50]) + '...',
-                    'url': f'/blog/posts/{os.path.splitext(filename)[0].replace(" ", "")}.html'
+                    'url': f'/blog/posts/{os.path.splitext(filename)[0].replace(" ", "_")}.html'
                 }
                 self.posts.append(post)
         
