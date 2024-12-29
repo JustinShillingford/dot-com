@@ -122,6 +122,7 @@ class StaticBlogGenerator:
         fg.link(href=f'{self.site_url}/blog')
         fg.description('Latest posts from Justin Shillingford\'s Blog')
         fg.logo(f'{self.site_url}/img/favicon/favicon-32x32.png')
+        fg.image(url=f'{self.site_url}/img/favicon/favicon-rss.png', title='Justin Shillingford\'s Blog', link=f'{self.site_url}/blog')
         
         for post in self.posts:
             fe = fg.add_entry()
